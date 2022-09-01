@@ -1,0 +1,16 @@
+<div cdkDrag class="example-container">
+  <h2>shvili</h2>
+
+  <div
+    cdkDropList
+    #doneList="cdkDropList"
+    [cdkDropListData]="doneTwo"
+    [cdkDropListConnectedTo]="[doneList]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)"
+  >
+    <div class="example-box" *ngFor="let item of doneTwo" cdkDrag>
+      {{ item }}
+    </div>
+  </div>
+</div>

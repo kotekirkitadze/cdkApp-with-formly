@@ -1,0 +1,15 @@
+<div class="example-container">
+  <h2>Done Child</h2>
+  <div
+    cdkDropList
+    #doneList="cdkDropList"
+    [cdkDropListData]="done"
+    [cdkDropListConnectedTo]="[todoList]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)"
+  >
+    <div class="example-box" *ngFor="let item of done" cdkDrag>{{ item }}</div>
+  </div>
+</div>
+
+<app-done-two></app-done-two>

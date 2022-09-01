@@ -1,0 +1,12 @@
+<div
+  class="example-list"
+  class="container"
+  cdkDropList
+  id="view"
+  [cdkDropListConnectedTo]="ids"
+  cdkDropListSortingDisabled
+>
+  <div class="example-box" cdkDrag *ngFor="let widget of list">
+    {{ widget }}
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="">
+  <div
+    class="example-list"
+    class="container"
+    cdkDropList
+    id="workSpace"
+    [cdkDropListConnectedTo]="ids"
+    cdkDropListSortingDisabled
+    (cdkDropListDropped)="drop($event)"
+  >
+    <form [formGroup]="form">
+      <formly-form
+        [model]="model"
+        [fields]="fields"
+        [options]="options"
+        [form]="form"
+      >
+        <button pButton type="submit">Submit</button>
+      </formly-form>
+    </form>
+  </div>
+</div>
